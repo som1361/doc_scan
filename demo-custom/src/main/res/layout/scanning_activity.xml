@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/captureActivityRoot"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@android:color/black"
+	>
+
+	<TextView
+		android:id="@+id/instructionTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="36dp"
+		android:layout_centerHorizontal="true"
+		android:textSize="20sp"
+		android:textColor="#FFFFFF"
+		android:layout_alignParentTop="true"
+		android:text="@string/instructionTitle"
+		/>
+
+	<TextView
+		android:id="@+id/instructionSubtitle"
+		android:paddingHorizontal="80dp"
+		android:gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/instructionTitle"
+		android:layout_marginTop="16dp"
+		android:layout_centerHorizontal="true"
+		android:textSize="14sp"
+		android:textColor="#FFFFFF"
+		android:text="@string/instructionSubtitle"
+		/>
+
+	<fragment
+		android:id="@+id/scan_fragment"
+		android:name="com.thegrizzlylabs.geniusscan.sdk.camera.ScanFragment"
+		android:layout_width="wrap_content"
+		android:layout_height="500dp"
+		android:layout_above="@id/user_guidance"
+		android:layout_centerHorizontal="true"
+		tools:layout="@layout/scan_fragment" />
+
+	<com.thegrizzlylabs.geniusscan.sdk.camera.DefaultFocusIndicator
+		android:id="@+id/focus_indicator"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/scan_fragment"
+		android:layout_alignBottom="@+id/scan_fragment"
+		android:layout_alignLeft="@+id/scan_fragment"
+		android:layout_alignRight="@+id/scan_fragment"
+		/>
+
+	<TextView
+		android:id="@+id/user_guidance"
+		android:layout_width="wrap_content"
+		android:padding="16dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:textColor="#FFF"
+		tools:text="Keep Camera Steady to Recognize..."
+		/>
+
+	<Button
+		android:id="@+id/captureButton"
+		android:layout_width="wrap_content"
+		android:visibility="gone"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:text="@string/capture"
+		/>
+
+</RelativeLayout>
