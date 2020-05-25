@@ -1,1 +1,1 @@
-include ':demo-custom', ':demo-simple'
+include ':app'
