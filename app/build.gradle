@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
-def licensekeyPropertiesFile = rootProject.file('license.properties');
-def licensekeyProperties = new Properties()
-licensekeyProperties.load(new FileInputStream(licensekeyPropertiesFile))
+//def licensekeyPropertiesFile = rootProject.file('license.properties');
+//def licensekeyProperties = new Properties()
+//licensekeyProperties.load(new FileInputStream(licensekeyPropertiesFile))
 
 
 android {
@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
         applicationId "id.locii.truuthkyc"
-        buildConfigField('String', 'licensekey', licensekeyProperties['licensekey'])
+        //buildConfigField('String', 'licensekey', licensekeyProperties['licensekey'])
     }
 
     buildTypes {

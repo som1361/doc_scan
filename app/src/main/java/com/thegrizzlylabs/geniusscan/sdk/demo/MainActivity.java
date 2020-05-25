@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         //
          try {
             // Replace this key by your key
-            GeniusScanLibrary.init(this, BuildConfig.licensekey);
+           // GeniusScanLibrary.init(this, BuildConfig.licensekey);
+             GeniusScanLibrary.init(this,"1234");
          } catch(LicenseException e) {
             new AlertDialog.Builder(this)
                     .setMessage("This version is not valid anymore. Please update to the latest version.")
